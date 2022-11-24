@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<!-- Mirrored from isystem.uz/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Jun 2022 10:52:59 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="csrf-token" content="dnwOaBdbwaBH8kaBC8Mtq8eAdfBcV8Vbfa7armjg">
+    <title>isystem - muhandislik maktabi</title>
+    <meta property="fb:app_id" content=""/>
+    <meta property="og:title" content="isystem"/>
+    <meta property="og:site_name" content="isystem"/>
+    <meta property="og:url" content="index.html"/>
+    <meta property="og:locale" content="en_US"/>
+    <meta name="robots" content="index,follow"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/isystem.css' %}" crossorigin="anonymous">
+
+    <link rel="shortcut icon" href="{% static 'favicon.ico' %}">
+
+
+</head>
+<body>
+    <div id="app" class="page">
+        <div class="main pb-0">
+
+            <div class="container header js-header" id="header">
+    <div class="header__center">
+        <button class="header__burger js-header-burger">
+            <span></span>
+        </button>
+        <a class="header__logo" href="/">
+            <img class="header__pic" src="{% static 'images/isystem-logo.png' %}" alt=""></a>
+        <div class="header__wrap js-header-wrap">
+            <nav class="header__nav">
+                <a class=" header__item "
+                   href="/about">Biz haqimizda
+                </a>
+                <a class="header__item "
+                   href="/courses">Kurslar
+                </a>
+                <a class="header__item "
+                   href="/contact">Bog'lanish</a>
+                {% if  not request.user.is_authenticated%}
+                  
+                <a class="header__item "
+                href="/accounts/login">Login</a>
+                
+                <a class="header__item "
+                href="/accounts/signup">Signup
+                
+                {% else %}
+                {% endif %}
+                <a class="header__item "
+                href="/accounts/logout">Chiqish
+
+                
+                
+                {% if request.user.is_staff %}
+                
+                <a class="header__item "
+                href="/davomat/">Davomat
+
+                
+                    
+                {% endif %}
+                
+                </a>            <div class="header__photo"><img class="header__pic" src="{% static 'img/menu-pic.png' %}" alt=""></div>
+            </nav>
+            <div class="header__photo"><img class="header__pic" src="{% static 'img/menu-pic.png' %}" alt=""></div>
+        </div>
+        <a class="quality__link btn btn-lg btn-outline-light text-dark border-warning ml-5 bg-warning"
+           href="/aply/">Ariza qoldirish<svg class="icon icon-arrow-right">
+                <use xlink:href="{%static 'img/sprite.svg' %}#icon-arrow-right"></use>
+            </svg>
+        </a>
+    </div>
+    <div class="header__bg js-header-bg"></div>
+</div>
+
+
+  {% block content %}
+
+
+
+  {% endblock %}
+
+        </div>
+    </div>
+
+    <div class="footer js-footer">
+    <div class="footer__center center">
+        <div class="container px-0 pb-4">
+            <div class="row">
+                <div class="col-sm-12 col-md-3">
+                    <a class="footer__logo" href="#">
+                        <img class="footer__pic" src="{% static 'images/isystem-logo.png' %}" alt="">
+                    </a>
+                </div>
+                <div class="col-sm-12 col-md-6 text-center">
+                    <div class="text-center pt-2 pb-2">
+                        <span class="h4 mr-2">(99) 882-60-60,</span>
+                        <span class="h4 ">(99) 884-60-60</span>
+                    </div>
+                    <div class="footer__copyright text-center">
+                        Toshkent shahar Mirzo Ulugbek tumani, <br/>
+                        Mustaqillik prospekti, Mirzo Ulugbek kuchasi 54A.
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-3 pt-2 text-right">
+                    <a href="https://www.tiktok.com/@isystem.uz" target="_blank"><img class="footer__pic" src="{% static 'images/social_icons/tiktok.png' %}" alt=""></a>
+                    <a href="ttps://www.instagram.com/isystem.uz/" target="_blank"><img class="footer__pic" src="{% static 'images/social_icons/instagram.png' %}" alt=""></a>
+
+                    <a href="https://www.facebook.com/isystem.uz" target="_blank"><img class="footer__pic" src="{% static 'images/social_icons/facebook.png' %}" alt=""></a>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <div class="footer__copyright">© 2020, isystem.</div>
+            <a class="footer__scroll js-link-scroll" href="#header">
+                <div class="footer__icon"><img class="footer__pic" src="{% static 'img/scroll.svg' %}" alt=""></div>
+                <div class="footer__text">Yuqoriga</div>
+            </a>
+        </div>
+
+
+
+    </div>
+</div>
+
+
+    <script src="{% static 'js/app.js' %}" type="text/javascript"></script>
+
+    <script src="{% static 'jquery/app2.js' %}" type="text/javascript"></script>
+    <script src="{% static 'jquery/common.js' %}" type="text/javascript"></script>
+
+  <!--Start of Tawk.to Script-->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/61ed9114b9e4e21181bb7175/1fq3vtep5';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+</body>
+
+<!-- Mirrored from isystem.uz/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Jun 2022 10:53:29 GMT -->
+</html>

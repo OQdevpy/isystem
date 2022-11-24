@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}
+Logout
+{% endblock title %}
+
+{% block content %}
+<div class="container" style="margin-top: 10px;padding: 150px;">
+      <h4>Rostan ham chiqaszmi</h4>
+      <form action="" method="post">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-primary">Logout</button>
+            <a href="/">Orqaga</a>
+      </form>
+</div>
+{% endblock content %}

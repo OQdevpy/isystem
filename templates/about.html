@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container text-center">
+        <h2 class="title" style="position: relative; z-index:5">Biz haqimizda</h2>
+    </div>
+    <div class="access" style="margin-top: -120px; margin-bottom: -60px;">
+        <div class="access__center center">
+
+            <div class="access__view" data-aos data-aos-delay="300">
+
+
+                <div class="access__preview"><img class="access__pic" src="{% static 'img/access-pic-2.png' %}" alt=""></div>
+                <div class="access__preview"><img class="access__pic js-parallax" data-scale="1.5" data-orientation="up" src="{% static 'img/access-pic-1.png' %}" alt=""></div>
+                <div class="access__preview"><img class="access__pic js-parallax" data-scale="1.5" data-orientation="down" src="{% static 'img/main-pic-2.png' %}" alt=""></div>
+            </div>
+        </div>
+        <div class="access__circles">
+            <div class="access__circle" data-aos data-aos-offset="300"></div>
+            <div class="access__circle" data-aos data-aos-delay="100" data-aos-offset="300"></div>
+            <div class="access__circle" data-aos data-aos-delay="200" data-aos-offset="300"></div>
+        </div>
+        <div class="access__clouds">
+            <div class="access__cloud"><img class="access__pic js-parallax" data-scale="1.5" data-orientation="left" src="{% static 'img/cloud.png' %}" alt=""></div>
+            <div class="access__cloud"><img class="access__pic js-parallax" data-scale="1.5" data-orientation="right" src="{% static 'img/cloud.png' %}" alt=""></div>
+        </div>
+        <div class="access__balls">
+            <div class="access__ball"></div>
+            <div class="access__ball"></div>
+            <div class="access__ball"></div>
+            <div class="access__ball"></div>
+            <div class="access__ball js-rellax" data-rellax-speed="-1"></div>
+            <div class="access__ball"></div>
+            <div class="access__ball js-rellax" data-rellax-speed="1"></div>
+        </div>
+    </div>
+
+    <div class="padding py-5" style="background-color: #ffc107 !important;">
+        <div class="container my-3 center">
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <h2 class="title text-white mb-5">
+                        <div>O’quv</div>
+                        <div>markazimizga</div>
+                        <div>sayohat</div>
+                    </h2>
+                    <div class="text-white mb-3">
+                        Bizning akademiyamiz axborot texnologiyalarining barcha tendensiyalari bilan yaqindan tanishtiradi.
+                        Shinam o‘quv binosi va zamonaviy texnologiyalarga asoslangan
+                        kurslar dasturi bilan yurtimizning eng yirik, xalqaro kompaniyalarida IT karyerangizni boshlaysiz.
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="quality mt-5 pt-5">
+        <div class="quality__head">
+            <div class="quality__center center">
+                <div class="quality__top" data-aos="animation-scale-y">
+                    <h2 class="quality__title title">Maqsadlarimiz.</h2>
+                </div>
+                <div class="quality__info info" data-aos="animation-scale-y" data-aos-delay="200">
+                    Raqobatbardosh malakali kadrlarni yetishtirish. Ish beruvchi sizni emas, siz ishni tanlang!
+                </div>
+            </div>
+            <div class="quality__line"><img class="quality__pic" src="{% static 'img/line-3.svg' %}" alt=""></div>
+            <div class="like__preview" data-aos><img class="like__pic" src="{% static 'img/hand-1.png' %}" alt=""></div>
+        </div>
+        <div class="quality__body">
+            <div class="quality__col">
+                <div class="quality__item" data-aos="animation-scale-x-left">
+                    <div class="quality__icon"><img class="quality__pic" src="{% static 'img/calendar.png' %}" alt=""></div>
+                    <div class="quality__details">
+                        <div class="quality__category">Dasturlashni o‘rganish</div>
+                        <div class="quality__text">
+                            Dasturlash asoslarini, Python, C#, Java, PHP yoki Go tillarini o'rganasiz...
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="quality__col">
+                <div class="quality__item" data-aos="animation-scale-x-right" data-aos-delay="200">
+                    <div class="quality__icon"><img class="quality__pic" src="{% static 'img/clock-big.png' %}" alt=""></div>
+                    <div class="quality__details">
+                        <div class="quality__category">Vaqtingizni tejash</div>
+                        <div class="quality__text">
+                            Jahon standartlariga mos keluvchi o‘quv dasturlarimiz sizning ham vaqtingizni, ham naqdingizni tejaydi.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="quality__col">
+                <div class="quality__item" data-aos="animation-scale-x-left">
+                    <div class="quality__icon"><img class="quality__pic" src="{% static 'img/cup-big.png' %}" alt=""></div>
+                    <div class="quality__details">
+                        <div class="quality__category">Do’stona atmosfera</div>
+                        <div class="quality__text">
+                            Zamonaviy offisimizda mentorlaringiz va hamrohlaringiz bilan o‘qish jarayoni yanada qiziqarli va mazmunli 👋
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="quality__col">
+                <div class="quality__item" data-aos="animation-scale-x-right" data-aos-delay="200">
+                    <div class="quality__icon"><img class="quality__pic" src="{% static 'img/chatbox-big.png' %}" alt=""></div>
+                    <div class="quality__details">
+                        <div class="quality__category">24/7 qo‘llab-quvvatlash</div>
+                        <div class="quality__text">
+                            Kursni muvaffaqiyatli tugatib, yirik kompaniyalarda yuqori daromad topishingizgacha bo‘lgan yo‘lda sizga yelkadosh bo‘lamiz
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="quality__circles">
+            <div class="quality__circle"> </div>
+            <div class="quality__circle"> </div>
+        </div>
+    </div>
+
+{% endblock %}
+

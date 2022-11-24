@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+        <div class="container teams">
+        <div class="teams__center">
+            <div class="teams__head mb-5" data-aos="animation-scale-y">
+                <h2 class="teams__title title">Biz bilan bog‘lanish uchun <span class="title__color">.</span></h2>
+            </div>
+            <div class="">
+
+                <div class="row">
+                    <div class="col-sm-12 col-lg-3">
+                        <div class="" style="padding: 10px 40px 0px 0px">
+                            <div style="margin: 10px 0 20px 0; font-weight: bolder;">
+                                <div>(99) 882-60-60</div>
+                                <div>(99) 884-60-60</div>
+                            </div>
+                            <div style="font-size: 14px;">
+                                Toshkent shahar.<br/>
+                                Mirzo Ulugbek tum.,<br/>
+                                Mustaqillik prospekti,<br/>
+                                Mirzo Ulugbek kuchasi 54A.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-lg-9">
+                        <div class="popup" id="popup-contact">
+                            <div class="popup__wrap">
+                                <div class="popup__body bg-warning">
+
+
+
+                                                                        
+                                    <form class="popup__form" method="post" action="">
+                                        {% csrf_token %}
+                                        <input type="hidden" name="_token" value="dnwOaBdbwaBH8kaBC8Mtq8eAdfBcV8Vbfa7armjg">
+                                        <div class="popup__field field">
+                                            <div class="field__label">Ism</div>
+                                            <div class="field__wrap">
+                                                <div class="field__icon"><img class="field__pic" src="{% static 'img/user.svg' %}" alt=""></div>
+                                                <input class="field__input" type="text" name="name" value="" placeholder="Ismingizni kiriting">
+                                            </div>
+                                        </div>
+                                        <div class="popup__field field">
+                                            <div class="field__label">Email</div>
+                                            <div class="field__wrap">
+                                                <div class="field__icon"><img class="field__pic" src="{% static 'img/sending-mail.svg' %}" alt=""></div>
+                                                <input class="field__input" type="email" name="email" value="" placeholder="Email pochta manzilingizni kiriting">
+                                            </div>
+                                        </div>
+                                        <div class="popup__field field field_textarea">
+                                            <div class="field__label">Xabar</div>
+                                            <div class="field__wrap">
+                                                <div class="field__icon"><img class="field__pic" src="{% static 'img/message.svg' %}" alt=""></div>
+                                                <textarea class="field__textarea" name="msg" placeholder="Xabaringizni yozing">
+                                                   
+                                                </textarea>
+                                            </div>
+                                        </div>
+                                        <button class=" btn btn-lg btn-dark" type="submit">Yuborish</button>
+                                    </form>
+                                    <div class="popup__circles">
+                                        <div class="popup__circle"></div>
+                                        <div class="popup__circle"></div>
+                                    </div>
+                                </div>
+                                <div class="popup__bg">
+                                    <div class="popup__preview">
+                                        <img class="popup__pic" src="{% static 'img/popup-pic-1.png' %}" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+        <div class="teams__circle js-rellax" data-rellax-speed="1"></div>
+    </div>
+{% endblock %}
+
+
+

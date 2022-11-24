@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+        <div class="container center p-2 mb-5">
+            <div class="row">
+
+                    {%for post in posts %}
+                    <div class="col-sm-12 col-md-6">
+                        <a class="card bg-transparent border-0 mb-3" href="/courses/{{ post.slug}}">
+                            <div class="plan__item w-100 shadow" data-aos="animation-translate-y">
+                                <div class="card-header">
+                                    <div class="row">
+                                        <div class="col-xs-12 col-md-8 text-center text-lg-left">
+                                            <div class="mb-2">{{post.month}} oy / haftada {{post.day}} kun</div>
+                                            <div class="h4 font-weight-bold">{{post.title}}</div>
+
+                                        </div>
+                                        <div class="col-xs-12 col-md-4 text-center text-lg-right ">
+                                            <div class="mb-2">Oylik to'lov</div>
+                                            <div class="">
+                                                <span class="h4 font-weight-bolder">{{post.price}}</span> so'm
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body" style="min-height: 148px;">
+                                    {{post.desc}}
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    {%endfor %}
+
+                
+                    
+                
+
+
+            </div>
+
+
+        </div>
+        <div class="quality__circles">
+            <div class="quality__circle"> </div>
+            <div class="quality__circle"> </div>
+        </div>
+    </div>
+
+    <div class="d-block d-flex"></div>
+    <div class="my-5 py-5">
+        &nbsp;
+    </div>
+
+        </div>
+    </div>
+
+
+{% endblock %}

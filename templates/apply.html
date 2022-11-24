@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+{%load static %}
+
+<!-- Mirrored from isystem.uz/courses/apply by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Jun 2022 10:53:52 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="csrf-token" content="dnwOaBdbwaBH8kaBC8Mtq8eAdfBcV8Vbfa7armjg">
+
+
+    <title>Ariza qoldirish | isystem - muhandislik maktabi</title>
+    <meta property="fb:app_id" content=""/>
+    <meta property="og:title" content="isystem"/>
+    <meta property="og:site_name" content="isystem"/>
+    <meta property="og:url" content="apply.html"/>
+    <meta property="og:locale" content="en_US"/>
+    <meta name="robots" content="index,follow"/>
+
+    <link rel="stylesheet" href="{%static 'css/isystem.css' %}" crossorigin="anonymous">
+
+    <link rel="shortcut icon" href="{%static 'favicon.ico' %}">
+
+    
+</head>
+<body>
+    <div id="app" class="page">
+        <div class="main">
+
+            <div class="container header js-header " id="header">
+                <div class=" text-center">
+                    <a class="header__logo" href="../index.html">
+                        <img class="header__pic" src="{%static 'images/isystem-logo.png'%}" alt="">
+                    </a>
+                </div>
+                <div class="header__bg js-header-bg"></div>
+            </div>
+
+
+                <div class="container teams">
+        <div class="teams__center">
+            <div class="plan__head" data-aos="animation-scale-y">
+                <h2 class="plan__title title">Hoziroq ro‘yxatdan o‘ting!</h2>
+                <div class="info">
+                    Nimadan boshlashni, qaysi kurs sizga mos kelishini bilmayapsizmi? Bizga murojaat qiling,
+                    sizga eng tog‘ri yo‘lni ko‘rsatamiz.
+                </div>
+            </div>
+            <div class="">
+                    <div class="popup" id="popup-contact">
+                            <div class="popup__wrap">
+                                <div class="popup__body bg-warning">
+                                    
+                                    
+
+                                                                        
+                                    <form class="popup__form" method="post" action="">
+                                        {%csrf_token %}
+                                        <input type="hidden" name="_token" value="dnwOaBdbwaBH8kaBC8Mtq8eAdfBcV8Vbfa7armjg">
+                                        <div class="popup__field field">
+                                            <div class="field__label">Ism*</div>
+                                            <div class="field__wrap">
+                                                <div class="field__icon"><img class="field__pic" src="{%static 'imgs/user.html' %}" alt=""></div>
+                                                <input class="field__input" type="text" name="name" value="" placeholder="Ismingizni kiriting">
+                                            </div>
+                                        </div>
+                                        <div class="popup__field field">
+                                            <div class="field__label">Yosh*</div>
+                                            <div class="field__wrap">
+                                                <div class="field__icon"><img class="field__pic" src="{%static 'imgs/user.html' %}" alt=""></div>
+                                                <input class="field__input" type="text" name="age" value="" placeholder="Yoshigizni kiriting">
+                                            </div>
+                                        </div>
+                                        <div class="popup__field field">
+                                            <div class="field__label">Telefon*</div>
+                                            <div class="field__wrap">
+                                                <div class="field__icon"><img class="field__pic" src="{%static 'imgs/sending-mail.html' %}" alt=""></div>
+                                                <input class="field__input" type="text" name="phone" value="" placeholder="Telefon raqamingizni kiriting">
+                                            </div>
+                                        </div>
+                                        <div class="popup__field field">
+                                            <div class="field__label">Telefon <small>(qo'shimcha agar bo'lsa)</small></div>
+                                            <div class="field__wrap">
+                                                <div class="field__icon"><img class="field__pic" src="{%static 'imgs/sending-mail.html' %}" alt=""></div>
+                                                <input class="field__input" type="text" name="q_phone" value="" placeholder="Qo'chimcha telefon raqamingizni kiriting">
+                                            </div>
+                                        </div>
+                                        <div class="popup__field field field_textarea">
+                                            <div class="field__label">Kurs</div>
+                                            <div class="field__wrap">
+                                                <div class="field__icon"><img class="field__pic" src="{%static 'imgs/message.html' %}" alt=""></div>
+                                                <select class="field__input" name="course">
+                                                    <option value="...">Kursni tanlang</option>
+                                                    {% for i in courses %}
+                                                    <option value="{{i.title}}">{{i.title}}</option>
+                                                    {%endfor%}
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <button class=" btn btn-lg btn-dark" type="submit">Ariza yuborish</button>
+                                    </form>
+                                    <div class="popup__circles">
+                                        <div class="popup__circle"></div>
+                                        <div class="popup__circle"></div>
+                                    </div>
+                                </div>
+                                <div class="popup__bg">
+                                    <div class="popup__preview">
+                                        <img class="popup__pic" src="{%static 'imgs/popup-pic-1.html' %}" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            </div>
+        </div>
+        <div class="teams__circle js-rellax" data-rellax-speed="1"></div>
+    </div>
+
+
+
+
+        </div>
+    </div>
+
+    <div class="footer js-footer">
+    <div class="footer__center center">
+        <div class="container px-0 pb-4">
+            <div class="row">
+                <div class="col-sm-12 col-md-3">
+                    <a class="footer__logo" href="#">
+                        <img class="footer__pic" src="{% static 'images/isystem-logo.png' %}" alt="">
+                    </a>
+                </div>
+                <div class="col-sm-12 col-md-6 text-center">
+                    <div class="text-center pt-2 pb-2">
+                        <span class="h4 mr-2">(99) 882-60-60,</span>
+                        <span class="h4 ">(99) 884-60-60</span>
+                    </div>
+                    <div class="footer__copyright text-center">
+                        Toshkent shahar Mirzo Ulugbek tumani, <br/>
+                        Mustaqillik prospekti, Mirzo Ulugbek kuchasi 54A.
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-3 pt-2 text-right">
+                    <a href="https://www.tiktok.com/@isystem.uz" target="_blank"><img class="footer__pic" src="{% static 'images/social_icons/tiktok.png' %}" alt=""></a>
+                    <a href="ttps://www.instagram.com/isystem.uz/" target="_blank"><img class="footer__pic" src="{% static 'images/social_icons/instagram.png' %}" alt=""></a>
+
+                    <a href="https://www.facebook.com/isystem.uz" target="_blank"><img class="footer__pic" src="{% static 'images/social_icons/facebook.png' %}" alt=""></a>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <div class="footer__copyright">© 2020, isystem.</div>
+            <a class="footer__scroll js-link-scroll" href="#header">
+                <div class="footer__icon"><img class="footer__pic" src="{% static 'img/scroll.svg' %}" alt=""></div>
+                <div class="footer__text">Yuqoriga</div>
+            </a>
+        </div>
+
+
+
+    </div>
+</div>
+
+    
+    <script src="{% static 'js/app.js' %}" type="text/javascript"></script>
+    
+    <script src="{% static 'jquery/app2.js' %}" type="text/javascript"></script>
+    <script src="{% static 'jquery/common.js' %}" type="text/javascript"></script>
+</body>
+
+<!-- Mirrored from isystem.uz/courses/apply by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Jun 2022 10:53:56 GMT -->
+</html>

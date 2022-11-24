@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Login
+{% endblock title %}
+{% block content %}
+{% if not error %}
+
+
+<section class="vh-100 gradient-custom">
+      <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                  <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                        <div class="cardtext-dark" style="margin-top: 5px;background-color: rgb(58, 188, 186);">
+                              <div class="card-body p-5 text-center">
+                                    <form method="post">
+                                          {% csrf_token %}
+                                          <div class="mb-md-5 mt-md-4 pb-5">
+
+                                                <h2 class="fw-bold mb-2 text-uppercase">Kirish</h2>
+                                                <p class="text-dark-50 mb-5">Iltimos login va parolingizni kiriting</p>
+
+                                                <div class="form-outline form-dark mb-4">
+                                                      <label for="">Username</label>
+                                                      {{form.username}} </div>
+
+                                                <div class="form-outline form-dark mb-4">
+                                                      <label for="">Password</label>
+                                                      {{form.password}} </div>
+
+
+                                                <button class="btn btn-outline-dark btn-lg px-5"
+                                                      type="submit">Kirish</button>
+                                          </div>
+                                    </form>
+                                    <div>
+                                          <p class="mb-0">Sizda account yo'qmi? <a
+                                                      href="{%url 'accounts:signup' %}">Sign up</a>
+                                          </p>
+                                    </div>
+
+                              </div>
+                        </div>
+                  </div>
+            </div>
+      </div>
+</section>
+{% else %}
+<p>Bunday user yo'q <a href="{% url 'accounts:login' %}">Qaytadan harakat qiling</a></p>
+{% endif %}
+
+{% endblock content %}
